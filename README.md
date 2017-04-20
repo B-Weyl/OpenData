@@ -1,37 +1,33 @@
-## Welcome to GitHub Pages
+This page will contain visualizations of available open datasets with information from Delaware.
 
-You can use the [editor on GitHub](https://github.com/B-Weyl/OpenData/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+# Births in Delaware from 2009 to 2014
+Using the following [dataset](https://dev.socrata.com/foundry/data.delaware.gov/y8fa-dqxh) we can analyze the births in Delaware from 2009 to 2014. I will be using the requests library to do so.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+    import requests
+    url = 'https://data.delaware.gov/resource/y8fa-dqxh.json?$limit=100000'
+    response = requests.get(url)
+    if response.status_code == 200:
+        data = response.json()
 
-### Markdown
+We can now use our response object to analyze the data. Delaware is a small state, let's find out how many births, of the total 72456, were in each county. Delaware has three counties: New Castle, Kent, Sussex.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+    kent, sussex, ncc = 0, 0, 0
+    for item in data:
+        if item['county_of_residence'] == 'Sussex':
+            sussex += 1
+        elif item['county_of_residence'] == 'New Castle':
+            ncc += 1
+        else:
+            kent += 1
+    print(ncc, kent, sussex)
 
-```markdown
-Syntax highlighted code block
+We can plot that data to show the following:
 
-# Header 1
-## Header 2
-### Header 3
 
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/B-Weyl/OpenData/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+    labels = 'NCC', 'Kent', 'Sussex'
+    sizes = [ncc, kent, sussex]
+    fig1, ax1 = plt.subplots()
+    ax1.pie(sizes, labels=labels, autopct='%1.1f%%', shadow=False, startangle=90)
+    ax1.axis('equal')
+    plt.show()
+![chart1](http://i.imgur.com/5qki6p6.png)
