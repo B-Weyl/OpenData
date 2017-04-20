@@ -3,8 +3,8 @@ from collections import Counter
 import matplotlib.pyplot as plt
 
 
-app_token = 'EqqwZClI8rQFJGYspGxbLwpM0'
-secret_token = 'RSxypKCDoJGmGdktWebJZWiWzcOpbtPzHgoG'
+app_token = ''
+secret_token = ''
 url = 'https://data.delaware.gov/resource/y8fa-dqxh.json?$limit=100000'
 
 response = requests.get(url)
