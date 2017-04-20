@@ -30,4 +30,5 @@ We can plot that data to show the following:
     ax1.pie(sizes, labels=labels, autopct='%1.1f%%', shadow=False, startangle=90)
     ax1.axis('equal')
     plt.show()
+    
 ![chart1](http://i.imgur.com/5qki6p6.png)
