@@ -1,4 +1,4 @@
-This page will contain visualizations of available open datasets with information from Delaware.
+This page contains visualizations of available open datasets with information from Delaware.
 
 # Births in Delaware from 2009 to 2014
 Using the following [dataset](https://dev.socrata.com/foundry/data.delaware.gov/y8fa-dqxh) we can analyze the births in Delaware from 2009 to 2014. I will be using the requests library to do so.
