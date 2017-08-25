@@ -4,6 +4,7 @@ This page contains visualizations of available open datasets with information fr
 Using the following [dataset](https://dev.socrata.com/foundry/data.delaware.gov/y8fa-dqxh) we can analyze the births in Delaware from 2009 to 2014. I will be using the requests library to do so.
 
     import requests
+    import matplotlib.pyplot as plt
     url = 'https://data.delaware.gov/resource/y8fa-dqxh.json?$limit=100000'
     response = requests.get(url)
     if response.status_code == 200:
