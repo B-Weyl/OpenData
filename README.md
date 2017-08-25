@@ -77,6 +77,7 @@ Doing so we see that there were 5,271 births from mothers aged less than 20, 56,
                 sussex_less_than_twenty += 1
     print(sussex_less_than_twenty, sussex_twenty, sussex_thirtyfive)
 ```
+
 Under Twenty | Twenty to Thirty-four | Thirty-Five Plus    
 ---: | ---: | ---:
 1,268 | 10,603 | 1,604
@@ -95,6 +96,7 @@ Under Twenty | Twenty to Thirty-four | Thirty-Five Plus
                 kent_less_than_twenty += 1
     print(kent_less_than_twenty, kent_twenty, kent_thirtyfive)
 ```
+
 Under Twenty | Twenty to Thirty-four | Thirty-Five Plus    
 ---: | ---: | ---:
 1,015 | 10,869 | 1,420
