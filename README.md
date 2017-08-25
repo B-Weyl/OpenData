@@ -1,6 +1,7 @@
 This page contains visualizations of available open datasets with information from Delaware.
 
 # Births in Delaware from 2009 to 2014
+
 Using the following [dataset](https://dev.socrata.com/foundry/data.delaware.gov/y8fa-dqxh) we can analyze the births in Delaware from 2009 to 2014. I will be using the requests library to do so.
 
     import requests
@@ -57,7 +58,7 @@ We can also use the same method as above to take a look at the age of the mother
             less_than_twenty += 1
     print(less_than_twenty, twenty, thirtyfive)
     
-Under Twenty | Twenty to Thirty-four | Thirty-Five +    
+Under Twenty | Twenty to Thirty-four | Thirty-Five Plus    
 ---: | ---: | ---:
 5,271 | 56,402 | 10,783
 
@@ -76,7 +77,7 @@ Doing so we see that there were 5,271 births from mothers aged less than 20, 56,
                 sussex_less_than_twenty += 1
     print(sussex_less_than_twenty, sussex_twenty, sussex_thirtyfive)
 ```
-Under Twenty | Twenty to Thirty-four | Thirty-Five +    
+Under Twenty | Twenty to Thirty-four | Thirty-Five Plus    
 ---: | ---: | ---:
 1,268 | 10,603 | 1,604
 
@@ -94,7 +95,7 @@ Under Twenty | Twenty to Thirty-four | Thirty-Five +
                 kent_less_than_twenty += 1
     print(kent_less_than_twenty, kent_twenty, kent_thirtyfive)
 ```
-Under Twenty | Twenty to Thirty-four | Thirty-Five +    
+Under Twenty | Twenty to Thirty-four | Thirty-Five Plus    
 ---: | ---: | ---:
 1,015 | 10,869 | 1,420
 
@@ -113,9 +114,7 @@ Under Twenty | Twenty to Thirty-four | Thirty-Five +
     print(ncc_less_than_twenty, ncc_twenty, ncc_thirtyfive)
 ```
 
-Under Twenty | Twenty to Thirty-four | Thirty-Five +    
+Under Twenty | Twenty to Thirty-four | Thirty-Five Plus    
 ---: | ---: | ---:
 2,814 | 30,579 | 6,434
-
-
 
